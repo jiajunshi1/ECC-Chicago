@@ -7,61 +7,40 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		7BC3CD442E1C54EB00C0D7B5 /* PBXContainerItemProxy */ = {
+		DC7D1AD42E1C4C9600100D1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7BC3CD2E2E1C54EA00C0D7B5 /* Project object */;
+			containerPortal = DC7D1ABE2E1C4C9300100D1B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7BC3CD352E1C54EA00C0D7B5;
+			remoteGlobalIDString = DC7D1AC52E1C4C9300100D1B;
 			remoteInfo = NewbieGainz;
 		};
-		7BC3CD4E2E1C54EB00C0D7B5 /* PBXContainerItemProxy */ = {
+		DC7D1ADE2E1C4C9600100D1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7BC3CD2E2E1C54EA00C0D7B5 /* Project object */;
+			containerPortal = DC7D1ABE2E1C4C9300100D1B /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7BC3CD352E1C54EA00C0D7B5;
+			remoteGlobalIDString = DC7D1AC52E1C4C9300100D1B;
 			remoteInfo = NewbieGainz;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7BC3CD362E1C54EA00C0D7B5 /* NewbieGainz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewbieGainz.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BC3CD432E1C54EB00C0D7B5 /* NewbieGainzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewbieGainzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BC3CD4D2E1C54EB00C0D7B5 /* NewbieGainzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewbieGainzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC7D1AC62E1C4C9300100D1B /* NewbieGainz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewbieGainz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC7D1AD32E1C4C9600100D1B /* NewbieGainzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewbieGainzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC7D1ADD2E1C4C9600100D1B /* NewbieGainzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewbieGainzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		7BA8F94D2E1EED49009BE4EC /* Exceptions for "NewbieGainzTests" folder in "NewbieGainzTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				NewbieGainzTests.swift,
-			);
-			target = 7BC3CD422E1C54EB00C0D7B5 /* NewbieGainzTests */;
-		};
-		7BA8F94E2E1EED49009BE4EC /* Exceptions for "NewbieGainzTests" folder in "NewbieGainzUITests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				NewbieGainzTests.swift,
-			);
-			target = 7BC3CD4C2E1C54EB00C0D7B5 /* NewbieGainzUITests */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		7BA8F94B2E1EED49009BE4EC /* NewbieGainzTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				7BA8F94D2E1EED49009BE4EC /* Exceptions for "NewbieGainzTests" folder in "NewbieGainzTests" target */,
-				7BA8F94E2E1EED49009BE4EC /* Exceptions for "NewbieGainzTests" folder in "NewbieGainzUITests" target */,
-			);
-			path = NewbieGainzTests;
-			sourceTree = "<group>";
-		};
-		7BC3CD382E1C54EA00C0D7B5 /* NewbieGainz */ = {
+		DC7D1AC82E1C4C9300100D1B /* NewbieGainz */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = NewbieGainz;
 			sourceTree = "<group>";
 		};
-		7BC3CD502E1C54EB00C0D7B5 /* NewbieGainzUITests */ = {
+		DC7D1AD62E1C4C9600100D1B /* NewbieGainzTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = NewbieGainzTests;
+			sourceTree = "<group>";
+		};
+		DC7D1AE02E1C4C9600100D1B /* NewbieGainzUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = NewbieGainzUITests;
 			sourceTree = "<group>";
@@ -69,21 +48,21 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7BC3CD332E1C54EA00C0D7B5 /* Frameworks */ = {
+		DC7D1AC32E1C4C9300100D1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BC3CD402E1C54EB00C0D7B5 /* Frameworks */ = {
+		DC7D1AD02E1C4C9600100D1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BC3CD4A2E1C54EB00C0D7B5 /* Frameworks */ = {
+		DC7D1ADA2E1C4C9600100D1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,22 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7BC3CD2D2E1C54EA00C0D7B5 = {
+		DC7D1ABD2E1C4C9300100D1B = {
 			isa = PBXGroup;
 			children = (
-				7BC3CD382E1C54EA00C0D7B5 /* NewbieGainz */,
-				7BC3CD502E1C54EB00C0D7B5 /* NewbieGainzUITests */,
-				7BC3CD372E1C54EA00C0D7B5 /* Products */,
-				7BA8F94B2E1EED49009BE4EC /* NewbieGainzTests */,
+				DC7D1AC82E1C4C9300100D1B /* NewbieGainz */,
+				DC7D1AD62E1C4C9600100D1B /* NewbieGainzTests */,
+				DC7D1AE02E1C4C9600100D1B /* NewbieGainzUITests */,
+				DC7D1AC72E1C4C9300100D1B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7BC3CD372E1C54EA00C0D7B5 /* Products */ = {
+		DC7D1AC72E1C4C9300100D1B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7BC3CD362E1C54EA00C0D7B5 /* NewbieGainz.app */,
-				7BC3CD432E1C54EB00C0D7B5 /* NewbieGainzTests.xctest */,
-				7BC3CD4D2E1C54EB00C0D7B5 /* NewbieGainzUITests.xctest */,
+				DC7D1AC62E1C4C9300100D1B /* NewbieGainz.app */,
+				DC7D1AD32E1C4C9600100D1B /* NewbieGainzTests.xctest */,
+				DC7D1ADD2E1C4C9600100D1B /* NewbieGainzUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,132 +95,134 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7BC3CD352E1C54EA00C0D7B5 /* NewbieGainz */ = {
+		DC7D1AC52E1C4C9300100D1B /* NewbieGainz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BC3CD572E1C54EB00C0D7B5 /* Build configuration list for PBXNativeTarget "NewbieGainz" */;
+			buildConfigurationList = DC7D1AE72E1C4C9600100D1B /* Build configuration list for PBXNativeTarget "NewbieGainz" */;
 			buildPhases = (
-				7BC3CD322E1C54EA00C0D7B5 /* Sources */,
-				7BC3CD332E1C54EA00C0D7B5 /* Frameworks */,
-				7BC3CD342E1C54EA00C0D7B5 /* Resources */,
+				DC7D1AC22E1C4C9300100D1B /* Sources */,
+				DC7D1AC32E1C4C9300100D1B /* Frameworks */,
+				DC7D1AC42E1C4C9300100D1B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				7BC3CD382E1C54EA00C0D7B5 /* NewbieGainz */,
+				DC7D1AC82E1C4C9300100D1B /* NewbieGainz */,
 			);
 			name = NewbieGainz;
 			packageProductDependencies = (
 			);
 			productName = NewbieGainz;
-			productReference = 7BC3CD362E1C54EA00C0D7B5 /* NewbieGainz.app */;
+			productReference = DC7D1AC62E1C4C9300100D1B /* NewbieGainz.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7BC3CD422E1C54EB00C0D7B5 /* NewbieGainzTests */ = {
+		DC7D1AD22E1C4C9600100D1B /* NewbieGainzTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BC3CD5A2E1C54EB00C0D7B5 /* Build configuration list for PBXNativeTarget "NewbieGainzTests" */;
+			buildConfigurationList = DC7D1AEA2E1C4C9600100D1B /* Build configuration list for PBXNativeTarget "NewbieGainzTests" */;
 			buildPhases = (
-				7BC3CD3F2E1C54EB00C0D7B5 /* Sources */,
-				7BC3CD402E1C54EB00C0D7B5 /* Frameworks */,
-				7BC3CD412E1C54EB00C0D7B5 /* Resources */,
+				DC7D1ACF2E1C4C9600100D1B /* Sources */,
+				DC7D1AD02E1C4C9600100D1B /* Frameworks */,
+				DC7D1AD12E1C4C9600100D1B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7BC3CD452E1C54EB00C0D7B5 /* PBXTargetDependency */,
+				DC7D1AD52E1C4C9600100D1B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DC7D1AD62E1C4C9600100D1B /* NewbieGainzTests */,
 			);
 			name = NewbieGainzTests;
 			packageProductDependencies = (
 			);
 			productName = NewbieGainzTests;
-			productReference = 7BC3CD432E1C54EB00C0D7B5 /* NewbieGainzTests.xctest */;
+			productReference = DC7D1AD32E1C4C9600100D1B /* NewbieGainzTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7BC3CD4C2E1C54EB00C0D7B5 /* NewbieGainzUITests */ = {
+		DC7D1ADC2E1C4C9600100D1B /* NewbieGainzUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BC3CD5D2E1C54EB00C0D7B5 /* Build configuration list for PBXNativeTarget "NewbieGainzUITests" */;
+			buildConfigurationList = DC7D1AED2E1C4C9600100D1B /* Build configuration list for PBXNativeTarget "NewbieGainzUITests" */;
 			buildPhases = (
-				7BC3CD492E1C54EB00C0D7B5 /* Sources */,
-				7BC3CD4A2E1C54EB00C0D7B5 /* Frameworks */,
-				7BC3CD4B2E1C54EB00C0D7B5 /* Resources */,
+				DC7D1AD92E1C4C9600100D1B /* Sources */,
+				DC7D1ADA2E1C4C9600100D1B /* Frameworks */,
+				DC7D1ADB2E1C4C9600100D1B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7BC3CD4F2E1C54EB00C0D7B5 /* PBXTargetDependency */,
+				DC7D1ADF2E1C4C9600100D1B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				7BA8F94B2E1EED49009BE4EC /* NewbieGainzTests */,
-				7BC3CD502E1C54EB00C0D7B5 /* NewbieGainzUITests */,
+				DC7D1AE02E1C4C9600100D1B /* NewbieGainzUITests */,
 			);
 			name = NewbieGainzUITests;
 			packageProductDependencies = (
 			);
 			productName = NewbieGainzUITests;
-			productReference = 7BC3CD4D2E1C54EB00C0D7B5 /* NewbieGainzUITests.xctest */;
+			productReference = DC7D1ADD2E1C4C9600100D1B /* NewbieGainzUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7BC3CD2E2E1C54EA00C0D7B5 /* Project object */ = {
+		DC7D1ABE2E1C4C9300100D1B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					7BC3CD352E1C54EA00C0D7B5 = {
+					DC7D1AC52E1C4C9300100D1B = {
 						CreatedOnToolsVersion = 16.4;
 					};
-					7BC3CD422E1C54EB00C0D7B5 = {
+					DC7D1AD22E1C4C9600100D1B = {
 						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 7BC3CD352E1C54EA00C0D7B5;
+						TestTargetID = DC7D1AC52E1C4C9300100D1B;
 					};
-					7BC3CD4C2E1C54EB00C0D7B5 = {
+					DC7D1ADC2E1C4C9600100D1B = {
 						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 7BC3CD352E1C54EA00C0D7B5;
+						TestTargetID = DC7D1AC52E1C4C9300100D1B;
 					};
 				};
 			};
-			buildConfigurationList = 7BC3CD312E1C54EA00C0D7B5 /* Build configuration list for PBXProject "NewbieGainz" */;
+			buildConfigurationList = DC7D1AC12E1C4C9300100D1B /* Build configuration list for PBXProject "NewbieGainz" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 7BC3CD2D2E1C54EA00C0D7B5;
+			mainGroup = DC7D1ABD2E1C4C9300100D1B;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 7BC3CD372E1C54EA00C0D7B5 /* Products */;
+			productRefGroup = DC7D1AC72E1C4C9300100D1B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7BC3CD352E1C54EA00C0D7B5 /* NewbieGainz */,
-				7BC3CD422E1C54EB00C0D7B5 /* NewbieGainzTests */,
-				7BC3CD4C2E1C54EB00C0D7B5 /* NewbieGainzUITests */,
+				DC7D1AC52E1C4C9300100D1B /* NewbieGainz */,
+				DC7D1AD22E1C4C9600100D1B /* NewbieGainzTests */,
+				DC7D1ADC2E1C4C9600100D1B /* NewbieGainzUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7BC3CD342E1C54EA00C0D7B5 /* Resources */ = {
+		DC7D1AC42E1C4C9300100D1B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BC3CD412E1C54EB00C0D7B5 /* Resources */ = {
+		DC7D1AD12E1C4C9600100D1B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BC3CD4B2E1C54EB00C0D7B5 /* Resources */ = {
+		DC7D1ADB2E1C4C9600100D1B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,21 +232,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7BC3CD322E1C54EA00C0D7B5 /* Sources */ = {
+		DC7D1AC22E1C4C9300100D1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BC3CD3F2E1C54EB00C0D7B5 /* Sources */ = {
+		DC7D1ACF2E1C4C9600100D1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BC3CD492E1C54EB00C0D7B5 /* Sources */ = {
+		DC7D1AD92E1C4C9600100D1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,20 +256,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7BC3CD452E1C54EB00C0D7B5 /* PBXTargetDependency */ = {
+		DC7D1AD52E1C4C9600100D1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7BC3CD352E1C54EA00C0D7B5 /* NewbieGainz */;
-			targetProxy = 7BC3CD442E1C54EB00C0D7B5 /* PBXContainerItemProxy */;
+			target = DC7D1AC52E1C4C9300100D1B /* NewbieGainz */;
+			targetProxy = DC7D1AD42E1C4C9600100D1B /* PBXContainerItemProxy */;
 		};
-		7BC3CD4F2E1C54EB00C0D7B5 /* PBXTargetDependency */ = {
+		DC7D1ADF2E1C4C9600100D1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7BC3CD352E1C54EA00C0D7B5 /* NewbieGainz */;
-			targetProxy = 7BC3CD4E2E1C54EB00C0D7B5 /* PBXContainerItemProxy */;
+			target = DC7D1AC52E1C4C9300100D1B /* NewbieGainz */;
+			targetProxy = DC7D1ADE2E1C4C9600100D1B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		7BC3CD552E1C54EB00C0D7B5 /* Debug */ = {
+		DC7D1AE52E1C4C9600100D1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -351,7 +332,7 @@
 			};
 			name = Debug;
 		};
-		7BC3CD562E1C54EB00C0D7B5 /* Release */ = {
+		DC7D1AE62E1C4C9600100D1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -407,7 +388,7 @@
 			};
 			name = Release;
 		};
-		7BC3CD582E1C54EB00C0D7B5 /* Debug */ = {
+		DC7D1AE82E1C4C9600100D1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -426,7 +407,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JiaJunShi.NewbieGainz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clovis.NewbieGainz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -434,7 +415,7 @@
 			};
 			name = Debug;
 		};
-		7BC3CD592E1C54EB00C0D7B5 /* Release */ = {
+		DC7D1AE92E1C4C9600100D1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -453,7 +434,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JiaJunShi.NewbieGainz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clovis.NewbieGainz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -461,7 +442,7 @@
 			};
 			name = Release;
 		};
-		7BC3CD5B2E1C54EB00C0D7B5 /* Debug */ = {
+		DC7D1AEB2E1C4C9600100D1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -470,7 +451,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JiaJunShi.NewbieGainzTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clovis.NewbieGainzTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -479,7 +460,7 @@
 			};
 			name = Debug;
 		};
-		7BC3CD5C2E1C54EB00C0D7B5 /* Release */ = {
+		DC7D1AEC2E1C4C9600100D1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,7 +469,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JiaJunShi.NewbieGainzTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clovis.NewbieGainzTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -497,14 +478,14 @@
 			};
 			name = Release;
 		};
-		7BC3CD5E2E1C54EB00C0D7B5 /* Debug */ = {
+		DC7D1AEE2E1C4C9600100D1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JiaJunShi.NewbieGainzUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clovis.NewbieGainzUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -513,14 +494,14 @@
 			};
 			name = Debug;
 		};
-		7BC3CD5F2E1C54EB00C0D7B5 /* Release */ = {
+		DC7D1AEF2E1C4C9600100D1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JiaJunShi.NewbieGainzUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clovis.NewbieGainzUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -532,43 +513,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7BC3CD312E1C54EA00C0D7B5 /* Build configuration list for PBXProject "NewbieGainz" */ = {
+		DC7D1AC12E1C4C9300100D1B /* Build configuration list for PBXProject "NewbieGainz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7BC3CD552E1C54EB00C0D7B5 /* Debug */,
-				7BC3CD562E1C54EB00C0D7B5 /* Release */,
+				DC7D1AE52E1C4C9600100D1B /* Debug */,
+				DC7D1AE62E1C4C9600100D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BC3CD572E1C54EB00C0D7B5 /* Build configuration list for PBXNativeTarget "NewbieGainz" */ = {
+		DC7D1AE72E1C4C9600100D1B /* Build configuration list for PBXNativeTarget "NewbieGainz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7BC3CD582E1C54EB00C0D7B5 /* Debug */,
-				7BC3CD592E1C54EB00C0D7B5 /* Release */,
+				DC7D1AE82E1C4C9600100D1B /* Debug */,
+				DC7D1AE92E1C4C9600100D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BC3CD5A2E1C54EB00C0D7B5 /* Build configuration list for PBXNativeTarget "NewbieGainzTests" */ = {
+		DC7D1AEA2E1C4C9600100D1B /* Build configuration list for PBXNativeTarget "NewbieGainzTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7BC3CD5B2E1C54EB00C0D7B5 /* Debug */,
-				7BC3CD5C2E1C54EB00C0D7B5 /* Release */,
+				DC7D1AEB2E1C4C9600100D1B /* Debug */,
+				DC7D1AEC2E1C4C9600100D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BC3CD5D2E1C54EB00C0D7B5 /* Build configuration list for PBXNativeTarget "NewbieGainzUITests" */ = {
+		DC7D1AED2E1C4C9600100D1B /* Build configuration list for PBXNativeTarget "NewbieGainzUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7BC3CD5E2E1C54EB00C0D7B5 /* Debug */,
-				7BC3CD5F2E1C54EB00C0D7B5 /* Release */,
+				DC7D1AEE2E1C4C9600100D1B /* Debug */,
+				DC7D1AEF2E1C4C9600100D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7BC3CD2E2E1C54EA00C0D7B5 /* Project object */;
+	rootObject = DC7D1ABE2E1C4C9300100D1B /* Project object */;
 }

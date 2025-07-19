@@ -2,7 +2,7 @@
 //  NewbieGainzApp.swift
 //  NewbieGainz
 //
-//  Created by 56GOParticipant on 7/7/25.
+//  Created by 39GOParticipant on 7/7/25.
 //
 
 import SwiftUI

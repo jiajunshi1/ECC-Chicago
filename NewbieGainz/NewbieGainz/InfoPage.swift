@@ -16,26 +16,36 @@ struct InfoPage: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.black
+                Color(Color.black.opacity(0.9))
                     .ignoresSafeArea()
                 
-                ScrollView (.vertical, showsIndicators: true) {
-                    VStack(spacing:20) {
-                        Image(systemName: "info")
-                            .resizable()
-                            .foregroundColor(.black)
-                            .background(Color.white)
-                            .frame(width: 100, height: 100)
-                        
+                VStack(spacing:20) {
+                    Image("info")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                    
+                    HStack() {
+                        Spacer()
+                        Spacer()
                         Text("Basics")
                             .foregroundColor(.white)
                             .bold(true)
                             .font(.system(size: 45))
                         
-                        Text("Click the buttons below to learn more")
-                            .foregroundColor(.white)
-                            .font(.system(size: 20))
+                        Spacer()
                         
+                        // next button
+                        NavigationLink(destination: FitnessGoalsSetup() .navigationBarBackButtonHidden(true)) {
+                            Image("right")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                        }
+                    }
+                    
+                    Text("Click the buttons below to learn more")
+                        .foregroundColor(.white)
+                        .font(.system(size: 20))
+                    ScrollView (.vertical, showsIndicators: true) {
                         //dropdown feature - progressive
                         dropdown(title: "Why NewbieGainz?", isExpanded: $showWhy){
                             Text("Why us?... explain")
@@ -84,14 +94,12 @@ struct InfoPage: View {
                     .background(Color.black)
                     .padding(.horizontal)
                 } //scrollview
-                
-                
-                
+                .navigationBarBackButtonHidden(true)
             } //zstack
         } //navigationstack
-        
-        
     }
+    
+    
     @ViewBuilder
         func dropdown<Content: View>(title: String, isExpanded: Binding<Bool>, @ViewBuilder content: @escaping () -> Content) -> some View {
             VStack(spacing: 0) {
@@ -127,9 +135,6 @@ struct InfoPage: View {
                 }
             }
         }
-    
-    
-    
 }
 
 #Preview {

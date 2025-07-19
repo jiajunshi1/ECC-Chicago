@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.black
+                Color(Color.black.opacity(0.9))
                     .ignoresSafeArea()
                 
                 Text("NewbieGainz")
@@ -53,18 +53,15 @@ struct ContentView: View {
                 .position(x:200,  y:540)
                 
                 NavigationLink(destination: NewUserPage()) {
-                    Text("New User Click here")
+                    Text("New User?")
                         .foregroundColor(.white)
                         .font(.system(size: 20))
                 }
                 .position(x:200,  y:680)
-            }
-            
-            
-        }
-        
-        
-    }
+            } // end zstack
+            .navigationBarBackButtonHidden(true)
+        } // end nav stack
+    } // end body
 }
 
 #Preview {
