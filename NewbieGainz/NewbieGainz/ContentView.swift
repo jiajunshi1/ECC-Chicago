@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var userSettings: UserSettings
+    
     @State private var email = ""
     @State private var password = ""
     
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(Color.black.opacity(0.9))
+                Color(userSettings.backgroundColor)
                     .ignoresSafeArea()
                 
                 Text("NewbieGainz")
@@ -66,4 +68,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(UserSettings())
 }

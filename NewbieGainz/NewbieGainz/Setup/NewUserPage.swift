@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct NewUserPage: View {
+    @EnvironmentObject private var userSettings: UserSettings
+
     @State private var email = ""
     @State private var password = ""
     @Environment(\.dismiss) var dismiss
-    @State private var backgroundColor = Color(Color.black.opacity(0.9))
+    @State private var bgColor: Color = Color(Color.black.opacity(0.9))
     
     var body: some View {
         NavigationStack {
             ZStack {
-                backgroundColor
+                Color(userSettings.backgroundColor)
                     .ignoresSafeArea()
                 
                 Text("Welcome New User!")
@@ -31,12 +33,13 @@ struct NewUserPage: View {
                     .font(.system(size: 20, weight: .bold))
                     .position(x:200,  y:200)
                 
-                ColorPicker("Select Color", selection: $backgroundColor, supportsOpacity: false)
+                ColorPicker("Select Color", selection: $bgColor, supportsOpacity: false)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(100)
                     .labelsHidden()
                     .position(x:200, y:280)
+                    .onChange(of: bgColor) { userSettings.backgroundColor = bgColor }
                 
                 
                 Text("Email:")
@@ -89,4 +92,5 @@ struct NewUserPage: View {
 
 #Preview {
     NewUserPage()
+        .environmentObject(UserSettings())
 }

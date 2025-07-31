@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct TodayWorkout: View {
+    @EnvironmentObject private var userSettings: UserSettings
+    
+    var formattedDate: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter.string(from: Date())
+    }
+    
     var body: some View {
         NavigationStack() {
             VStack() {
@@ -16,118 +24,13 @@ struct TodayWorkout: View {
                     .frame(width: 100, height: 100)
                 ScrollView(.horizontal) {
                     HStack() {
-                        Button(action: {}) {
-                            VStack() {
-                                Text("Su")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
-                        
-                        Button(action: {}) {
-                            VStack() {
-                                Text("M")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                                
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
-                        
-                        Button(action: {}) {
-                            VStack() {
-                                Text("Tu")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
-                        
-                        Button(action: {}) {
-                            VStack() {
-                                Text("W")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
-                        
-                        Button(action: {}) {
-                            VStack() {
-                                Text("Th")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
-                        
-                        Button(action: {}) {
-                            VStack() {
-                                Text("F")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
-                        
-                        Button(action: {}) {
-                            VStack() {
-                                Text("Sa")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
+                        CalendarDay(label: "Su", map: $userSettings.workoutSchedule)
+                        CalendarDay(label: "M", map: $userSettings.workoutSchedule)
+                        CalendarDay(label: "Tu", map: $userSettings.workoutSchedule)
+                        CalendarDay(label: "W", map: $userSettings.workoutSchedule)
+                        CalendarDay(label: "Th", map: $userSettings.workoutSchedule)
+                        CalendarDay(label: "F", map: $userSettings.workoutSchedule)
+                        CalendarDay(label: "Sa", map: $userSettings.workoutSchedule)
                         
                     } // end hstack
                 } // end scroll view
@@ -153,7 +56,7 @@ struct TodayWorkout: View {
                 HStack() {
                     Spacer()
                     VStack() {
-                        Text("mm/dd/yyyy")
+                        Text(formattedDate)
                             .bold()
                             .foregroundColor(Color.white)
                             .font(.title)
@@ -168,7 +71,7 @@ struct TodayWorkout: View {
                 Spacer()
                 
                 VStack() {
-                    Text("Leg Day")
+                    Text("Push Day")
                         .bold()
                         .foregroundColor(Color.white)
                         .font(.title)
@@ -209,7 +112,7 @@ struct TodayWorkout: View {
             .padding()
             .background
             {
-                Color(Color.black.opacity(0.9))
+                Color(userSettings.backgroundColor)
                     .ignoresSafeArea()
             }
             
@@ -219,6 +122,33 @@ struct TodayWorkout: View {
     } // end body
 }
 
+struct CalendarDay: View {
+    let label: String
+    @Binding var map: [String:String]
+    var body: some View {
+        Button(action: {}) {
+            VStack() {
+                Text(label)
+                    .bold()
+                    .foregroundStyle(.black)
+                    .font(.title)
+                Text(map[label] ?? "")
+                    .bold()
+                    .foregroundStyle(.white)
+                    .font(.title2)
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            .padding()
+            .frame(width: 125, height: 125)
+            .contentShape(Rectangle())
+            .background(.gray)
+            .cornerRadius(15)
+            .navigationBarBackButtonHidden(true)
+        } // end button
+    } // end body
+}
+
 #Preview {
     TodayWorkout()
+        .environmentObject(UserSettings())
 }

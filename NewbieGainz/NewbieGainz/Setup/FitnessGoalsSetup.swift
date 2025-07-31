@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct FitnessGoalsSetup: View {
-    @State private var selectedGoal = ""
-    
-    func changeSelected(buttonPressed: String) {
+    @EnvironmentObject private var userSettings: UserSettings
         
-    }
-    
     var body: some View {
         NavigationStack() {
             VStack() {
@@ -50,77 +46,23 @@ struct FitnessGoalsSetup: View {
                     .bold()
                     .foregroundColor(Color.white)
                     .font(.headline)
-                Spacer()
-                Button(action: {}, label: {
-                    Spacer()
-                    Text("Toning")
-                    Spacer()
-                    Button(action: {}, label: {Image("info")
-                            .resizable()
-                        .frame(width: 50, height: 50)})
-                })
-                .id("toningButton")
-                .foregroundColor(Color.white)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding()
-                .frame(width: 300, height: 150)
-                .background(Rectangle().fill(Color.gray))
-                .font(.title)
-                .contentShape(Rectangle())
-                .cornerRadius(25)
                 
                 Spacer()
                 
-                Button(action: {}, label: {
-                    Spacer()
-                    VStack() {
-                        Text("Both")
-                        Text("(Recommended)")
-                            .font(.title2)
-                    }
-                    Spacer()
-                    Button(action: {}, label: {Image("info")
-                            .resizable()
-                        .frame(width: 50, height: 50)})
-                })
-                .id("bothButton")
-                .foregroundColor(Color.white)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding()
-                .frame(width: 300, height: 150)
-                .background(Rectangle().fill(Color.gray))
-                .font(.title)
-                .contentShape(Rectangle())
-                .cornerRadius(25)
-                
+                GoalButton(label: "Toning", selected: $userSettings.workoutGoal)
                 Spacer()
+                GoalButton(label: "Both", selected: $userSettings.workoutGoal)
+                Spacer()
+                GoalButton(label: "Strength Building", selected: $userSettings.workoutGoal)
                 
-                Button(action: {}, label: {
-                    Spacer()
-                    Text("Strength Building")
-                    Spacer()
-                    Button(action: {}, label: {Image("info")
-                            .resizable()
-                        .frame(width: 50, height: 50)})
-                })
-                .id("strengthButton")
-                .foregroundColor(Color.white)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding()
-                .frame(width: 300, height: 150)
-                .background(Rectangle().fill(Color.gray))
-                .font(.title)
-                .contentShape(Rectangle())
-                .cornerRadius(25)
-                
-                // buttons
+                // end buttons
                 Spacer()
             } // end vstack
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding()
             .background
             {
-                Color(Color.black.opacity(0.9))
+                Color(userSettings.backgroundColor)
                     .ignoresSafeArea()
             }
             Footer()
@@ -129,6 +71,52 @@ struct FitnessGoalsSetup: View {
     }
 }
 
+
+struct GoalButton: View {
+    let label: String
+    @Binding var selected: String?
+    
+//    private var link: View
+    
+    var body: some View {
+        Button(action: {
+            selected = label
+        }) {
+            HStack {
+                Spacer()
+                VStack() {
+                    Spacer()
+                    Text(label)
+                    Text(label=="Both" ? "(Recommended)" : "")
+                        .font(.title2)
+                }
+                Spacer()
+                NavigationLink(destination: FitnessGoalsSetup()) {
+                    Image("info")
+                        .resizable()
+                }
+                .frame(width: 50, height: 50)
+                .navigationBarBackButtonHidden(true)
+            }
+            
+            .foregroundColor(Color.white)
+            .fixedSize(horizontal: false, vertical: true)
+            .padding()
+            .frame(width: 300, height: 150)
+            .background(selected == label ? Color.black.opacity(0.7) : Color.gray.opacity(0.8))
+            .font(.title)
+            .contentShape(Rectangle())
+            .cornerRadius(25)
+            .overlay(
+                RoundedRectangle(cornerRadius: 25)
+                    .stroke(selected == label ? Color.white : Color.clear, lineWidth: 2)
+            )
+            .navigationBarBackButtonHidden(true)
+        } // end button
+    } // end body
+}
+
 #Preview {
     FitnessGoalsSetup()
+        .environmentObject(UserSettings())
 }

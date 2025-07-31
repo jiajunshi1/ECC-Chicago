@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Footer: View {
+    @EnvironmentObject private var userSettings: UserSettings
+    
     var body: some View {
         Spacer()
         HStack
@@ -46,7 +48,7 @@ struct Footer: View {
         .frame(width: .infinity, height: 75)
         .background
         {
-            Color(Color.black.opacity(0.9))
+            Color(userSettings.backgroundColor)
                 .ignoresSafeArea()
         }
     }
@@ -54,4 +56,5 @@ struct Footer: View {
 
 #Preview {
     Footer()
+        .environmentObject(UserSettings())
 }

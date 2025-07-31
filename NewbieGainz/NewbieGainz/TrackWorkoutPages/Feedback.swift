@@ -8,18 +8,24 @@
 import SwiftUI
 
 struct Feedback: View {
+    @EnvironmentObject private var userSettings: UserSettings
+    
     @State private var selectedFeedback: String? = nil
     @State private var showNextExercise = false
     
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.black
+                Color(userSettings.backgroundColor)
                     .ignoresSafeArea()
                 VStack {
+                    Image("logo")
+                        .resizable()
+                        .frame(width: 250, height: 150)
+                        
                     Text("How was your workout?")
                         .foregroundColor(.white)
-                        .padding(.top, 100)
+                        .padding(.top, 15)
                         .font(.system(size: 35))
                     
                     HStack (spacing:30){
@@ -34,7 +40,7 @@ struct Feedback: View {
                         .font(.system(size: 35))
                     
                     HStack(spacing:80){ //hstack2
-                        NavigationLink(destination: PainPage()) {
+                        NavigationLink(destination: ContentView2()) { // go to chatbot
                             Text("YES")
                                 .foregroundColor(.black)
                                 .padding()
@@ -101,4 +107,5 @@ struct FeedbackFace: View {
 
 #Preview {
     Feedback()
+        .environmentObject(UserSettings())
 }

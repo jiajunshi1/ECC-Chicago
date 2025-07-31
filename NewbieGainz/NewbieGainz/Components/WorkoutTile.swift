@@ -9,6 +9,8 @@ import SwiftUI
 import WebKit
 
 struct WorkoutTile: View {
+    @EnvironmentObject private var userSettings: UserSettings
+    
     var name: String
     var img: String
     var videoId: String
@@ -19,7 +21,7 @@ struct WorkoutTile: View {
         NavigationStack {
                 
             ZStack {
-                Color.black
+                Color(userSettings.backgroundColor)
                     .ignoresSafeArea()
                 ScrollView {
                     VStack() {
@@ -63,7 +65,7 @@ struct WorkoutTile: View {
                                     .foregroundColor(.white)
                                     .font(.system(size: 18))
                                     .padding()
-                                    .background(Color.gray.opacity(0.2)) // Box color
+                                    .background(Color.black.opacity(0.2)) // Box color
                                     .cornerRadius(10)
                                     .padding(.horizontal)
                                 }
@@ -80,7 +82,7 @@ struct WorkoutTile: View {
                                     .foregroundColor(.white)
                                     .font(.system(size: 18))
                                     .padding()
-                                    .background(Color.gray.opacity(0.2)) // Box color
+                                    .background(Color.black.opacity(0.2)) // Box color
                                     .cornerRadius(10)
                                     .padding(.horizontal)
                                 }
@@ -127,4 +129,5 @@ struct YouTubeView: UIViewRepresentable {
 
 #Preview {
     WorkoutTile(name: "WORKOUT NAME", img: "placeholder", videoId: "_FkbD0FhgVE",instructions: ["", "", ""], commonInjuries: ["", "", ""])
+        .environmentObject(UserSettings())
 }

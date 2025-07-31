@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct CalendarSetup: View {
+    @EnvironmentObject private var userSettings: UserSettings
+    
+    @State private var selectedDay: String? = nil
+    @State private var workoutPressed: String? = nil
+    
+    
     var body: some View {
         NavigationStack() {
             VStack() {
@@ -34,7 +40,7 @@ struct CalendarSetup: View {
                     Spacer()
                     
                     // next button
-                    NavigationLink(destination: WorkoutsList() .navigationBarBackButtonHidden(true)) {
+                    NavigationLink(destination: TutorialPage() .navigationBarBackButtonHidden(true)) {
                         Image("right")
                             .resizable()
                             .frame(width: 50, height: 50)
@@ -51,118 +57,14 @@ struct CalendarSetup: View {
                 
                 ScrollView(.horizontal) {
                     HStack() {
-                        Button(action: {}) {
-                            VStack() {
-                                Text("Su")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
                         
-                        Button(action: {}) {
-                            VStack() {
-                                Text("M")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                                
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
-                        
-                        Button(action: {}) {
-                            VStack() {
-                                Text("Tu")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
-                        
-                        Button(action: {}) {
-                            VStack() {
-                                Text("W")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
-                        
-                        Button(action: {}) {
-                            VStack() {
-                                Text("Th")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
-                        
-                        Button(action: {}) {
-                            VStack() {
-                                Text("F")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
-                        
-                        Button(action: {}) {
-                            VStack() {
-                                Text("Sa")
-                                    .bold()
-                                    .foregroundStyle(.black)
-                                    .font(.title)
-                                Text(" ")
-                            }
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                        .frame(width: 125, height: 125)
-                        .background(Color.gray)
-                        .contentShape(Rectangle())
-                        .cornerRadius(5)
+                        CalendarButton(label: "Su", selected: $selectedDay, map: $userSettings.workoutSchedule)
+                        CalendarButton(label: "M", selected: $selectedDay, map: $userSettings.workoutSchedule)
+                        CalendarButton(label: "Tu", selected: $selectedDay, map: $userSettings.workoutSchedule)
+                        CalendarButton(label: "W", selected: $selectedDay, map: $userSettings.workoutSchedule)
+                        CalendarButton(label: "Th", selected: $selectedDay, map: $userSettings.workoutSchedule)
+                        CalendarButton(label: "F", selected: $selectedDay, map: $userSettings.workoutSchedule)
+                        CalendarButton(label: "Sa", selected: $selectedDay, map: $userSettings.workoutSchedule)
                         
                     } // end hstack
                 } // end scroll view
@@ -170,7 +72,7 @@ struct CalendarSetup: View {
                 Spacer()
                 
                 // buttons
-                Button("Push", action: {})
+                Button("Push", action: {userSettings.workoutSchedule[selectedDay ?? ""] = "Push"})
                     .foregroundColor(Color.white)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding()
@@ -179,7 +81,7 @@ struct CalendarSetup: View {
                     .font(.title)
                     .contentShape(Rectangle())
                     .cornerRadius(5)
-                Button("Pull", action: {})
+                Button("Pull", action: {userSettings.workoutSchedule[selectedDay ?? ""] = "Pull"})
                     .foregroundColor(Color.white)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding()
@@ -188,13 +90,22 @@ struct CalendarSetup: View {
                     .font(.title)
                     .contentShape(Rectangle())
                     .cornerRadius(5)
-                Button("Leg", action: {})
+                Button("Leg", action: {userSettings.workoutSchedule[selectedDay ?? ""] = "Leg"})
                     .foregroundColor(Color.white)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding()
                     .frame(width: 150, height: 75)
                     .background(Rectangle().fill(Color.gray))
                     .font(.title)
+                    .contentShape(Rectangle())
+                    .cornerRadius(5)
+                Button("None", action: {userSettings.workoutSchedule[selectedDay ?? ""] = ""})
+                    .foregroundColor(Color.white)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding()
+                    .frame(width: 100, height: 50)
+                    .background(Rectangle().fill(Color.gray).opacity(0.5))
+                    .font(.title2)
                     .contentShape(Rectangle())
                     .cornerRadius(5)
                 
@@ -205,7 +116,7 @@ struct CalendarSetup: View {
             .padding()
             .background
             {
-                Color(Color.black.opacity(0.9))
+                Color(userSettings.backgroundColor)
                     .ignoresSafeArea()
             }
             
@@ -215,6 +126,40 @@ struct CalendarSetup: View {
     } // end body
 }
 
+struct CalendarButton: View {
+    let label: String
+    @Binding var selected: String?
+    @Binding var map: [String:String]
+    var body: some View {
+        Button(action: {
+            selected = label
+        }) {
+            VStack() {
+                Text(label)
+                    .bold()
+                    .foregroundStyle(.black)
+                    .font(.title)
+                Text(map[label] ?? "")
+                    .bold()
+                    .foregroundStyle(.white)
+                    .font(.title2)
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            .padding()
+            .frame(width: 125, height: 125)
+            .contentShape(Rectangle())
+            .background(selected == label ? Color.gray.opacity(0.5) : Color.gray.opacity(1))
+            .overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(selected == label ? Color.white : Color.clear, lineWidth: 2)
+            )
+            .cornerRadius(15)
+            .navigationBarBackButtonHidden(true)
+        } // end button
+    } // end body
+}
+
 #Preview {
     CalendarSetup()
+        .environmentObject(UserSettings())
 }

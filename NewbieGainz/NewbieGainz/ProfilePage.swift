@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ProfilePage: View {
-    @State private var backgroundColor = Color(Color.black.opacity(0.9))
+    @EnvironmentObject private var userSettings: UserSettings
+    
+    @State private var bgColor = Color(Color.black.opacity(0.9))
     @State private var notifs = true
     
     var body: some View {
@@ -71,11 +73,12 @@ struct ProfilePage: View {
                     
                     Spacer()
                     
-                    ColorPicker("Select Color", selection: $backgroundColor, supportsOpacity: false)
+                    ColorPicker("Select Color", selection: $bgColor, supportsOpacity: false)
                         .padding()
                         .background(Color.white)
                         .cornerRadius(100)
                         .labelsHidden()
+                        .onChange(of: bgColor) { userSettings.backgroundColor = bgColor }
                 }
                 .padding(.horizontal)
                 
@@ -115,7 +118,7 @@ struct ProfilePage: View {
             .padding()
             .background
             {
-                backgroundColor
+                userSettings.backgroundColor
                     .ignoresSafeArea()
             }
             Footer()
@@ -126,4 +129,5 @@ struct ProfilePage: View {
 
 #Preview {
     ProfilePage()
+        .environmentObject(UserSettings())
 }

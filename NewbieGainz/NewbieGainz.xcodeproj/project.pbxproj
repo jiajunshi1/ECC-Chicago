@@ -27,6 +27,7 @@
 		DC7D1AC62E1C4C9300100D1B /* NewbieGainz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewbieGainz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC7D1AD32E1C4C9600100D1B /* NewbieGainzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewbieGainzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC7D1ADD2E1C4C9600100D1B /* NewbieGainzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewbieGainzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC7D1B4A2E2ECC7200100D1B /* Head Injury Chat Bot.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Head Injury Chat Bot.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -88,6 +89,13 @@
 				DC7D1AC62E1C4C9300100D1B /* NewbieGainz.app */,
 				DC7D1AD32E1C4C9600100D1B /* NewbieGainzTests.xctest */,
 				DC7D1ADD2E1C4C9600100D1B /* NewbieGainzUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC7D1B4C2E2ECC7200100D1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,6 +206,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DC7D1AC72E1C4C9300100D1B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DC7D1B4C2E2ECC7200100D1B /* Products */;
+					ProjectRef = DC7D1B4A2E2ECC7200100D1B /* Head Injury Chat Bot.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DC7D1AC52E1C4C9300100D1B /* NewbieGainz */,
