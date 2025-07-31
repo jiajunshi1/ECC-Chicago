@@ -9,7 +9,7 @@ import Foundation
 
 class ChatViewModel: ObservableObject {
     @Published var messages: [ChatMessage] = []
-    private let apiKey = "AIzaSyD0zdmCATWTCF81S0EHJxpME5rlV-nUa4I"
+    private let apiKey = ""
 
     func sendMessage(_ text: String) {
         let userMessage = ChatMessage(text: text, isUser: true)
